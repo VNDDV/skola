@@ -1,0 +1,2 @@
+# skola
+primeri za učenike
