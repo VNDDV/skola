@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mooli&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+*{
+  box-sizing: border-box;
+}
+body {
+  background-image: url(R.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Mooli", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: rgb(182, 177, 177); /* Text color */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  .dark-button{
+    cursor: pointer;
+    position:relative;
+    bottom:250px;
+    left: 135px;
+    background-color: transparent;
+
+  }
+  
+  .container {
+
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    right:60px;
+    width: 350px;
+  }
+  
+  .header h1 {
+    font-size: 7vh;
+    font-weight: bold;
+    color: hsl(60, 100%, 50%); 
+    letter-spacing: 2px; 
+    text-align: center; 
+    
+    text-shadow: 2px 2px 4px rgba(153, 18, 18, 0.4); 
+  }
+  
+  .location h2 {
+    font-size: 4vh;
+    color: #e3ef08;
+    margin-bottom: 5px;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .location p {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .weather-info {
+    margin-top: 10px;
+  }
+  .current-weather-img{
+    width:30%;
+  }
+  .current-weather {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    margin-top: 5px;
+  }
+  .temperature,
+  .condition,
+  .humidity {
+    flex: 1;
+    padding: 20px;
+    
+  }
+  .temperature h3,
+  .condition h3 ,
+  .humidity h3{
+    font-size: 18px;
+    color: #333;
+  }
+  .temperature p,
+  .condition p,
+  .humidity p{
+    font-size: 24px;
+    color: #333;
+  }
+  
+  
+  .forecast-day {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* PROVIDNOST POZADINE */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .forecast-day p:first-child {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .forecast-day p:last-child {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  /* Stilizacija dugmeta za pretragu */
+  .search {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search input {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .search button {
+    background-color: #ea4dd3 ;
+    /* Boja za search dugme - lupica */
+    border: skyblue;
+    box-shadow: #4d9eea;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    
+    /* Boja lupice- bela */
+  }
+  
+  .search button:hover {
+    background-color:#325169;
+    /* Boja dugmeta kada se pređe preko njega mišem  */
+  }
+
+.header h1 {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animation for weather information */
+.weather-info {
+  animation: slideInFromLeft 1s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+
+.search {
+  animation: faded 1s ease-out;
+}
+
+@keyframes faded {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+.search button {
+  transition: background-color 0.4s ease;
+}
+.search button:hover {
+  background-color: #325169;
+ 
+  transform: scale(1.1);
+}
+.temperature, .condition, .humidity {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  text-align: center;
+}
+
+.temperature h3, .condition h3, .humidity h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.temperature p, .condition p, .humidity p {
+  font-size: 30px;
+  color: #333;
+}
+
+  
+/*    Datrum i vreme------------------  */
+
+
+.date-time {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  animation: fadeIn 1s;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.date-time:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+    
+    /* kraj za Datum i vreme ----- End of   Date and time   ---------------------------   */
+  
+  
